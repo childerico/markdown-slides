@@ -1,4 +1,4 @@
-MD_SOURCES = $(wildcard *.md)
+MD_SOURCES = $(filter-out README.md, $(wildcard *.md))
 TEMPLATE = template.latex
 PDF = slides.pdf
 TEX_OUTPUT = $(PDF:.pdf=.tex)

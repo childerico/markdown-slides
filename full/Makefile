@@ -1,7 +1,7 @@
 TEX_MAIN = slides.tex
 VIEWER = mupdf
 # -----------------------------------------
-MD_SOURCES = $(wildcard *.md)
+MD_SOURCES = $(filter-out README.md, $(wildcard *.md))
 TEX_SOURCES = $(MD_SOURCES:.md=.tex)
 PDF = $(TEX_MAIN:.tex=.pdf)
 MD_ARCHIVE = markdown.tar.gz
